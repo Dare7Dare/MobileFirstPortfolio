@@ -27,12 +27,33 @@
         }
     }
 
+    button {
+        margin-top: 2rem;
+        padding: .5rem;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, rgba($secondary-color, 0.75), rgba($secondary-color, 1));
+            color: white;
+            font-weight: 600;
+
+            &:hover {
+                background: $primary-color;
+                border: 2px $secondary-color solid;
+                color: $secondary-color;
+            }
+    }
+
     .social {
         padding-top: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        h5 {
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
 
         .icons {
             display: flex;
@@ -49,5 +70,123 @@
         }
     }
 
+
+    @keyframes popup {
+        0%{
+          transform: scale(1);
+        }
+        50%{
+          transform: scale(1.4);
+        }
+        60%{
+          transform: scale(1.1);
+        }
+        70%{
+          transform: scale(1.2);
+        }
+        80%{
+          transform: scale(1);
+        }
+        90%{
+          transform: scale(1.1);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: popup 0.7s;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    border-radius: 15px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 80vh;
+    color: black;
+    position: relative;
+
+        .validate-form {
+
+            .wrap-input100 {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 1.3rem;
+
+                .label-input100 {
+                    color: $secondary-color;
+                }
+
+                .input100 {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid $secondary-color;
+                    padding: 0.3rem 0.2rem;
+                }
+
+                #message {
+                    height: 80px;
+                }
+            }
+
+            .container-contact100-form-btn {
+                float: right;
+
+                .contact100-form-btn {
+                    padding: 0.5rem 1.5rem;
+                }
+            }
+
+           
+        }
+  }
+  
+  /* The Close Button */
+  .close {
+    color: $secondary-color;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .modal-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0rem;
+
+      p {
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          line-height: 50px;
+      }
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 

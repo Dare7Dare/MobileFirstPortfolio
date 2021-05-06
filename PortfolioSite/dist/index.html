@@ -61,20 +61,57 @@
             <h3>Front-End Developer</h3>
 
             <div class="home-buttons">
-                <button>
+                <button id="showModal">
                     HIRE ME!
                 </button>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p>Contact me via Email</p>
+                            <span class="close"><i class="fas fa-times"></i></span>
+                        </div>
+                        <form class="validate-form" action="https://formspree.io/f/xqkgrpgl" method="POST" id="my-form">
+                            <div class="wrap-input100 validate-input" data-validate="Name is required">
+                                <span class="label-input100">Your Name</span>
+                                <input class="input100" type="text" name="name" id="name" placeholder="Enter your name">
+                                <span class="focus-input100"></span>
+                              </div>
+                      
+                              <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <span class="label-input100">Email</span>
+                                <input class="input100" type="text" name="email" id="email" placeholder="Enter your email addess">
+                                <span class="focus-input100"></span>
+                              </div>
+                      
+                              <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                                <span class="label-input100">Message</span>
+                                <textarea class="input100" name="message" id="message" placeholder="Your message here..."></textarea>
+                                <span class="focus-input100"></span>
+                              </div>
+                      
+                              <div class="container-contact100-form-btn">
+                                <button class="contact100-form-btn" type="submit">
+                                  <span>
+                                    Submit
+                                  </span>
+                                </button>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+
                 <button>
-                    <a href="./Darko Kolevski.pdf" download>DOWNLOAD CV</a>
+                    <a href="Darko Kolevski.pdf" download="Darko Kolevski CV">DOWNLOAD CV</a>
                 </button>
             </div>
 
 
             <div class="social-icons">
-                <a href="#!">
+                <a href="https://www.linkedin.com/in/darko-kolevski-679a381aa/" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#!">
+                <a href="https://www.instagram.com/dare7official/?hl=en" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -95,6 +132,32 @@
     crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="../dist/js/main.js"></script>
+    <script>
+        // Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("showModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
 </body>
 </html>
