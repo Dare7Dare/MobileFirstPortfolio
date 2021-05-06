@@ -1,0 +1,155 @@
+#fixedButton {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #fixedButton::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: $secondary-color;
+  }
+  #fixedButton.showTop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    padding: 20px;
+}
+.roundedFixedBtn{
+  height: 40px;
+  line-height: 60px;  
+  width: 40px;  
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  color: $primary-color;
+  text-align: center;
+  cursor: pointer;
+}
+
+#arrowUp {
+    line-height: 38px;
+}
+
+.work-experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    color: $secondary-color;
+}
+    .jobs {
+        width: 70vw;
+        margin: 0rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        padding-bottom: 4rem;
+
+        .jobs-job {
+            background: lighten($primary-color, 10%);
+            padding: .5rem;
+            border-bottom: 5px solid $secondary-color;
+
+            &:hover {
+                box-shadow: $box-shadow;
+            }
+
+            h2, h3 {
+                margin: .5rem 0;
+            }
+
+            h5 {
+                margin: .4rem 0;
+            }
+
+            .text-secondary {
+                font-size: 1rem;
+            }
+
+            .company {
+                padding-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .from-to {
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+
+                .line-container {
+                    margin-left: -4%;
+                    width: 2px;
+                    height: 12px;
+                    background: white;
+                }
+
+                .circle-container {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $secondary-color;
+                }
+            }
+
+            .from-to-date {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 5px;
+
+                .from {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+
+                .to {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        .jobs-job:first-child {
+            margin-top: 3rem;
+        }
+    }
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+
+    i {
+        margin-left: -.7rem;
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,141 @@
+#fixedButton {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #fixedButton::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: $secondary-color;
+  }
+  #fixedButton.showTop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    padding: 20px;
+}
+.roundedFixedBtn{
+  height: 40px;
+  line-height: 60px;  
+  width: 40px;  
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  color: $primary-color;
+  text-align: center;
+  cursor: pointer;
+}
+
+#arrowUp {
+    line-height: 38px;
+}
+
+.home {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+        linear-gradient(to right, rgba($primary-color, 0.1), rgba($primary-color, 0.3)),
+        url('../dist/images/CV-transparent.png') center 5% no-repeat;
+    background-size: 90% 45%;
+
+    #greeting {
+        padding-top: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .home-name {
+        font-size: 2.2rem;
+        padding-bottom: .5rem;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        border-bottom: 2px solid $secondary-color;
+
+        .home-name-last {
+            color: $secondary-color;
+            font-weight: 700;
+        }
+    }
+
+    h3 {
+        font-weight: 700;
+        letter-spacing: .1rem;
+    }
+
+    .home-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .3rem;
+        padding: 0 2rem;
+        padding-top: 1.5rem;
+
+        button {
+            flex: 1;
+            padding: .5rem 0;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, rgba($secondary-color, 0.75), rgba($secondary-color, 1));
+            color: white;
+            letter-spacing: 1px;
+            font-weight: 600;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+
+            &:hover {
+                background: $primary-color;
+                border: 2px $secondary-color solid;
+                color: $secondary-color;
+
+                a {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+    }
+    
+    #time {
+        position: absolute;
+        bottom: 1rem;
+        left: 5%;
+    }
+
+    .social-icons {
+        padding-bottom: 2rem;
+
+        i {
+            font-size: 1.3rem;
+        }
+    }
+}

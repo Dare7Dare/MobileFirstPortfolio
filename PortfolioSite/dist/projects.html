@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darko Kolevski Projects</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../scss/main.css">
+</head>
+<body>
+
+    <a class="fixedButton" id="fixedButton" href>
+        <div class="roundedFixedBtn"><div id="arrowUp"><i class="fa fa-arrow-up"></i></div></div>
+     </a>
+    
+    
+    <header>
+
+        <div class="menu-btn">
+            <span class="menu-btn-burger">
+
+            </span>
+        </div>
+
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav-item">
+                    <a href="index.html" class="menu-nav-link">HOME</a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="about.html" class="menu-nav-link">ABOUT ME</a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="experience.html" class="menu-nav-link">WORK EXPERIENCE</a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="skills.html" class="menu-nav-link">SKILLS</a>
+                </li>
+                <li class="menu-nav-item active">
+                    <a href="projects.html" class="menu-nav-link">MY PROJECTS</a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="contact.html" class="menu-nav-link">CONTACT ME</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="projects">
+
+            <section class="projects">
+
+                <div class="projects-bio-image">
+                    <h2 class="text-secondary">MY PROJECTS</h2>
+                </div>
+
+                <!-- <div class="button-group" id="buttons">
+                    <button type="button" class="btn active" onclick="filterObjects('all')" id="btn1">All</button>
+                    <button type="button" class="btn" onclick="filterObjects('latest')">Latest</button>
+                    <button type="button" class="btn" onclick="filterObjects('upcoming')">Upcoming</button>
+                    <button type="button" class="btn" onclick="filterObjects('popular')">Popular</button>
+                </div> -->
+
+                <div class="projects-items objects">
+                    <div class="projects-item box latest">
+                        <img src="images/pss-project.png" alt="My Project">
+                        <div class="projects-buttons">
+                            <a href="#!" class="projects-button">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                        </div>
+                        <h3 class="project-name">Power Sport System</h3>
+                        <p class="project-tags">Popular, Mobile, Flutter, Latest</p>
+                    </div>
+                    <div class="projects-item box latest">
+                        <img src="images/hss-project.jpg" alt="My Project">
+                        <div class="projects-buttons">
+                            <a href="#!" class="projects-button">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                        </div>
+                        <h3 class="project-name">Human Support System</h3>
+                        <p class="project-tags">Upcoming, Mobile, Flutter</p>
+                    </div>
+                    <div class="projects-item box upcoming">
+                        <img src="images/seg-project.jpg" alt="My Project">
+                        <div class="projects-buttons">
+                            <a href="#!" class="projects-button">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                        </div>
+                        <h3 class="project-name">Skopje East Gate Mall</h3>
+                        <p class="project-tags">Upcoming, Popular, Mobile, Flutter</p>
+                    </div>
+                    <div class="projects-item box popular">
+                        <img src="images/gallery-project.jpg" alt="My Project">
+                        <div class="projects-buttons">
+                            <a href="#!" class="projects-button">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                        </div>
+                        <h3 class="project-name">Dejan Kolevski Photography</h3>
+                        <p class="project-tags">Upcoming, Web</p>
+                    </div>
+                    <div class="projects-item box popular">
+                        <img src="images/missSofija-project.jpg" alt="My Project">
+                        <div class="projects-buttons">
+                            <a href="#!" class="projects-button">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                        </div>
+                        <h3 class="project-name">Studio Miss Sofija</h3>
+                        <p class="project-tags">Latest, Popular, Web</p>
+                    </div>
+                    <div class="projects-item box upcoming">
+                        <img src="images/fc-project.jpg" alt="My Project">
+                        <div class="projects-buttons">
+                            <a href="#!" class="projects-button">
+                                <i class="fas fa-eye"></i> Preview
+                            </a>
+                        </div>
+                        <h3 class="project-name">FC DarMar</h3>
+                        <p class="project-tags">WebShop, CSS Animations, LocalStorage</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="social-icons">
+                <a href="#!">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <footer>
+                &copy; Copyright 2021
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="../dist/js/main.js"></script>
+    <script>
+        var btn = $('#fixedButton');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 100) {
+    btn.addClass('showTop');
+  } else {
+    btn.removeClass('showTop');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '100');
+});
+    </script>
+
+    <!-- <script>
+        filterObjects("all");
+
+        function filterObjects(c) {
+            var x, i;
+            x = document.getElementsByClassName("box");
+            if (c == "all") c = "";
+            for(i=0; i<x.length; i++) {
+                removeClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+            }
+        }
+
+        function addClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function removeClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i=0; i < arr2.length; i++) {
+                while(arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Get the container element
+var btnContainer = document.getElementById("buttons");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+        // Get the container element
+var btnContainer = document.getElementById("buttons");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+var btnContainer = document.getElementById("buttons");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("box");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("buttons");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script> -->
+</body>
+</html>

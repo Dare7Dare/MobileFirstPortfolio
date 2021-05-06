@@ -1,0 +1,139 @@
+.projects {
+    padding-bottom: 2rem;
+
+    &-bio-image {
+        padding-top: 3rem;
+        // height: 30vh;
+        width: 100%;
+        // background: 
+        //     linear-gradient(to right, rgba($primary-color, 0.1), rgba($primary-color, 0.3)),
+        //     url('../dist/images/CV-transparent.png') center 20% no-repeat;
+        // background-size: 90% 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        .text-secondary {
+            font-weight: 400;
+            font-size: 1.5em;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .button-group {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        padding: 15px;
+
+        button {
+            background: none;
+            border: none;
+            color: $secondary-color;
+            font-style: italic;
+        }
+        .btn.active {
+            color: white;
+        }
+    }
+
+    
+
+    // .box {
+    //     display: none;
+    // }
+
+    // .show {
+    //     display: block;
+    // }
+
+
+    .projects-items {
+        width: 60vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+
+        .projects-item {
+            position: relative;
+            border-bottom: 5px solid $secondary-color;
+            overflow: hidden;
+            cursor: pointer;
+
+            .project-name {
+                line-height: 30px;
+                color: $secondary-color;
+                font-weight: bold;
+            }
+
+            .project-tags {
+                font-size: 14px;
+                line-height: 20px;
+                color: silver;
+            }
+
+            img {
+                width: 100%;
+                height: 30vh;
+                border-radius: 10px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $secondary-color;
+                opacity: 0;
+                @include transition-ease;
+            }
+
+            &:hover {
+                &::after {
+                    top: 0;
+                    opacity: .9;
+                }
+
+                .projects-button {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .projects-buttons {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+            text-align: center;
+        }
+
+        .projects-button {
+            opacity: 0;
+            color: set-text-color($secondary-color);
+            @include transition-ease;
+
+            &:hover {
+                color: set-text-color(set-text-color($secondary-color));
+            }
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    transform: rotate(90deg) translate(-3rem, -5rem);
+}
